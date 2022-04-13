@@ -13,7 +13,7 @@ import Contact from '../components/Content/Contact';
 import Reservations from '../components/Content/Reservations';
 import About from '../components/Content/About';
 
-import PushScrollGlobal from '../helpers/globalscroll'
+import PushScrollGlobal from '../helpers/globalScroll'
 
 const Index = ({images}) => {
 	const router = useRouter();
@@ -34,7 +34,7 @@ const Index = ({images}) => {
 
 				<div data-scroll-container ref={containerRef} id="scroll-container" className="test test2 test3">
 					<div data-scroll-section>
-						<Grid gridTemplateColumns="repeat(5, 1fr)" position='relative' alignItems='center'>
+						<Flex maxW='400vw' position='relative' alignItems='center' flexDirection="row">
 							<Home images={images} />	
 
 							<Menu />
@@ -43,8 +43,7 @@ const Index = ({images}) => {
 
 							<Reservations />
 
-							<Contact />
-						</Grid>
+						</Flex>
 					</div>
 				</div>
 			

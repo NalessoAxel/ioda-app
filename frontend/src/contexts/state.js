@@ -8,7 +8,7 @@ export function AppWrapper({ children }) {
 
     return (
         <AppContext.Provider value={{scrollState, setScrollState}}>
-        {children}
+            {children}
         </AppContext.Provider>
     );
 }

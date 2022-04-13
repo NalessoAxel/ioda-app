@@ -4,7 +4,7 @@ import Container from '../Grid/Container'
 
 const About = () => {
     return (
-        <Container data-scroll-section>
+        <Container>
         <Flex minWidth='100vw' minH='calc(100vh - 127px - 62px)' bgColor='orange'>
             <Text>About</Text>
             </Flex>

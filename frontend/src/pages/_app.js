@@ -12,6 +12,7 @@ import theme from '../components/Theme/index';
 
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import { AppWrapper } from '../contexts/state';
+import '../../style.css'
 
 
 const MyApp = ({ Component, pageProps }) => {

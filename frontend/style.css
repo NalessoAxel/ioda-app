@@ -13,7 +13,10 @@ html.has-scroll-smooth {
         overflow: hidden;
     }
     
-    .has-scroll-smooth [data-scroll-container] {
-        min-height: 100vh;
-    }
     
+    [data-scroll-direction="horizontal"] [data-scroll-container] {
+     height: calc(100vh - 127px - 62px) !important;
+     
+    }
+    .has-scroll-smooth [data-scroll-container] {
+        min-height: calc(100vh - 127px - 62px) !important; }

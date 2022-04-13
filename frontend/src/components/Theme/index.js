@@ -47,6 +47,7 @@ const theme = extendTheme({
 	styles: {
 		body: {
 			position: 'static',
+			zIndex: '0',
 		},
 		'.c-scrollbar': {
 			zIndex: 1200,

@@ -4,7 +4,7 @@ export default {
     openGraph: {
         type: 'website',
         locale: 'fr_FR',
-        url: '',
+        url: 'Ioda.be',
         site_name: 'Ioda Restaurant',
     },
 };
