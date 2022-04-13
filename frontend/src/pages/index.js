@@ -14,6 +14,7 @@ import Reservations from '../components/Content/Reservations';
 import About from '../components/Content/About';
 
 import PushScrollGlobal from '../helpers/globalScroll'
+import BottomBar from '../components/Menu/BottomBar';
 
 const Index = ({images}) => {
 	const router = useRouter();
@@ -26,7 +27,7 @@ const Index = ({images}) => {
 			</Head>
 			
 			<LocomotiveScrollProvider
-				options={{ smooth: true, direction: 'horizontal' }}
+				options={{ smooth: true, direction: 'horizontal', scrollMobile: false }}
 				containerRef={containerRef}
 				watch={[]}
 			>	
@@ -34,20 +35,24 @@ const Index = ({images}) => {
 
 				<div data-scroll-container ref={containerRef} id="scroll-container" className="test test2 test3">
 					<div data-scroll-section>
-						<Flex maxW='400vw' position='relative' alignItems='center' flexDirection="row">
+						<Flex maxW='500vw' position='relative' alignItems='center' flexDirection="row">
 							<Home images={images} />	
 
 							<Menu />
 
+							<Reservations />
+
 							<About />
 
-							<Reservations />
+							<Contact />
 
 						</Flex>
 					</div>
+						
 				</div>
-			
+				<BottomBar />
 			</LocomotiveScrollProvider>
+			
 		</>
 	);
 };

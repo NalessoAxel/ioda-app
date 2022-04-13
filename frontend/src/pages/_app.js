@@ -65,7 +65,7 @@ const MyApp = ({ Component, pageProps }) => {
 						<main>
 							<Topbar />
 								<Component  {...pageProps} />
-							<BottomBar />
+							
 						</main>	
 					</AppWrapper>
 
