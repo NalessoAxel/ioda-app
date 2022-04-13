@@ -6,7 +6,7 @@ import { API_URL } from '../Utils/urls';
 
 const HomeHeader = ({images}) => {
     return (
-        <div>
+        <div id='home'>
             <Flex  minWidth='100vw' minHeight='calc(100vh - 127px - 62px)'>
                         <Grid gridTemplateColumns="repeat(3, 1fr)"  minWidth='100vw' minHeight='calc(100vh - 127px - 62px)' >
                             {images.data[0].attributes.banner.data.map((image, index) => (

@@ -39,7 +39,7 @@ const theme = extendTheme({
 		xl: {},
 		lg: {},
 		m: {},
-		sm: {},
+		sm: {fontSize: '18px'},
 		xs: {},
 		xxs: {},
 	},
@@ -47,10 +47,10 @@ const theme = extendTheme({
 	styles: {
 		body: {
 			position: 'static',
-			zIndex: '0',
 		},
 		'.c-scrollbar': {
 			zIndex: 1200,
+			display: 'none',
 		},
 		'.c-scrollbar_thumb': {
 			width: '3px',

@@ -13,9 +13,11 @@ import theme from '../components/Theme/index';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import { AppWrapper } from '../contexts/state';
 import '../../style.css'
+import { SmoothScrollProvider } from "../contexts/SmoothScrollContext";
 
 
 const MyApp = ({ Component, pageProps }) => {
+	const containerRef = useRef(null)
 
 	return (
 		<>
@@ -61,14 +63,13 @@ const MyApp = ({ Component, pageProps }) => {
 
 				<DefaultSeo {...SEO} />
 
-					<AppWrapper>
-						<main>
-							<Topbar />
+				<Topbar />
+				<SmoothScrollProvider containerRef={containerRef}>
+						<main data-scroll-container>
 								<Component  {...pageProps} />
-							
 						</main>	
-					</AppWrapper>
-
+				</SmoothScrollProvider>
+				
 			</ChakraProvider>
 		</>
 	);

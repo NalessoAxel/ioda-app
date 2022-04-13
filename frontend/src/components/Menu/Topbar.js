@@ -6,18 +6,20 @@ import Link from 'next/link'
 const Topbar = () => {
     return (
         <Container minH='127px'>
-            <Flex alignItems='flex-end' justifyContent='space-between' position='fixed' w='100%' px='50px' pt='20px'>
-                <Flex>
-                    <Link passHref href='/'>
-                        <Image src='/logo.svg' alt='logo' w='100%' h='89px' objectFit='cover' objectPosition='center' />
-                    </Link>
+            <Col colStart={2} colEnd={26}>
+                <Flex alignItems='flex-end' justifyContent='space-between'>
+                    <Flex>
+                        <Link passHref href='/'>
+                            <Image src='/logo.svg' alt='logo' w='100%' h='89px' objectFit='cover' objectPosition='center' />
+                        </Link>
+                    </Flex>
+                            
+                    <Flex  justifyContent='flex-end' h='100%'>
+                        <Text textStyle='body' mr={2}>FR</Text>
+                        <Text textStyle='body'>EN</Text>      
+                    </Flex>           
                 </Flex>
-                        
-                <Flex  justifyContent='flex-end' h='100%'>
-                    <Text textStyle='body' mr={2}>FR</Text>
-                    <Text textStyle='body'>EN</Text>      
-                </Flex>           
-            </Flex>
+            </Col>
         </Container>
     )
 }
